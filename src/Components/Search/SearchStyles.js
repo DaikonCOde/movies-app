@@ -12,7 +12,7 @@ export const ContentSearch = styled.div`
   right: 0;
   background: ${ props => props.theme.colors.dark };
   padding: 20px 15px;
-  z-index: 10;
+  z-index: 12;
   transform: ${props => props.isOpen ? ' translateX(0)': 'translateX(100%)'};
   transition: all .3s linear;
 `

@@ -13,7 +13,10 @@ export const ContentLoader = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px auto;
+  margin: ${ props => props.margin ? props.margin : '20px auto' };
+  width: 100%;
+  background: ${ props => props.theme.colors.dark};
+  height: ${ props => props.height ? props.height : 'auto'};
 `
 
 export const Loader = styled.div`

@@ -27,10 +27,24 @@ export const GlobalStyles = createGlobalStyle`
   a {
     color: inherit;
     text-decoration: none;
+    display: block;
   }
 
   input {
     border: none;
     outline: none;
+  }
+
+  #root {
+    .swiper-button-prev {
+      left: 0px;
+    }
+    .swiper-button-next, .swiper-button-prev {
+      color: ${ props => props.theme.colors.secondary[1]};
+      &:after {
+        font-size: 30px;
+        font-weight: 700;
+      }
+    }
   }
 `

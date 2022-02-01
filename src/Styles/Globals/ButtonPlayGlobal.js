@@ -7,4 +7,7 @@ export const ButtonPlayGlobal = styled.button`
   font-size: 25px;
   line-height: 0;
   text-align: center;
+  min-width: 30px;
+  height: 30px;
+  padding: 0;
 `

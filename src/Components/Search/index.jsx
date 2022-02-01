@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 // Hooks
 import { useGetMovieByName } from '../../Hooks/useGetMovieByName';
 import { useSelector } from 'react-redux';
+import { useSearchParams } from 'react-router-dom';
 // Components
 import CardMovie from '../CardMovie';
 import Loading from '../Loading';
@@ -14,22 +15,28 @@ import { MdChevronRight, MdSearch } from 'react-icons/md';
 
 const Search = ({ isOpen, onClose }) => {
 
+  const [ searchParams, setSearchParams] = useSearchParams();
+
+  const key = searchParams.get('keyword') || '';
+
   const [ movies, isLoading, error, getMovieByName ] = useGetMovieByName();
-  const [ keyword, setKeyword ] = useState('');
   const { trendingMovies, isLoadingTrending, errorTrending } = useSelector( state => state.trendingMovies )
 
   useEffect( () => {
-    if( keyword.length > 2 ) {
-      const key = keyword.toLowerCase().replaceAll(' ', '%20');
+    if( key.length > 2 ) {
       getMovieByName(key)
     }
-  },[keyword] )
-
-
+    if( key.length <= 2) {
+      setSearchParams({})
+    }
+  },[key] )
+  
+  
   const handleChange = (e) => {
     const value = e.target.value;
+    const keyword = value.toLowerCase().replaceAll(' ', '%20');
+    setSearchParams({keyword})
 
-    setKeyword(value)
   }
   return (
     <ContentSearch isOpen={isOpen} >
@@ -52,7 +59,7 @@ const Search = ({ isOpen, onClose }) => {
         {
           isLoadingTrending
           ? <Loading />
-          : keyword.length < 2
+          : key.length < 3
             ?(
               <>
                 <Title className='title' >Trending</Title>
@@ -64,7 +71,7 @@ const Search = ({ isOpen, onClose }) => {
               : movies.length === 0 
                 ? ( <div className='notFound'>We did not find anything</div> )
                 : (<>
-                    <Title>{keyword}</Title>
+                    <Title>{key}</Title>
                     <CardMovie movies={movies}/>
                   </>)
         }

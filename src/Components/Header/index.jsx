@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import Search from '../Search';
 
@@ -13,9 +14,11 @@ const Header = () => {
     <>
       <ContentHeader>
         <Brand>
-          <span>
-            eFlix
-          </span>
+          <Link to='/'>
+            <span>
+              eFlix
+            </span>
+          </Link>
         </Brand>
         <Menu>
           <MdSearch className="search" onClick={() => setIsOpen(true)} />

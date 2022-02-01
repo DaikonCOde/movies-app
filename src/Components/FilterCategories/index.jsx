@@ -29,8 +29,6 @@ const FilterCategories = () => {
 
     // Add class to selected Category
     item.classList.add('categoryActive');
-
-    console.log(e.target.id)
   }
 
   return (

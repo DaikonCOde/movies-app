@@ -12,8 +12,8 @@ export const MoviesByCategories = createSlice({
   initialState,
   reducers: {
     insertMoviesByCategories: (state, action) => {
-      const { movies, isLoading, error } = action.payload
-      state.movies = movies;
+      const { movies: listMovie, isLoading, error } = action.payload
+      state.movies = listMovie || state.movies;
       state.isLoading = isLoading;
       state.error = error;
     },

@@ -1,9 +1,11 @@
 import React from 'react';
 import { ContentLoader, Loader } from './LoadingStyles';
 
-const Loading = () => {
+const Loading = ( { height, margin } ) => {
+  
+
   return (
-    <ContentLoader>
+    <ContentLoader height = {height} margin = {margin}>
       <Loader className="lds-roller">
         <div></div>
         <div></div>

@@ -7,6 +7,16 @@ export const ContentComingSoon = styled.div`
   margin: 20px 0;
   padding: 0 15px;
   width: 100%;
+  .mySwiper {
+    .swiper-pagination-bullet {
+      background: ${ props => props.theme.colors.gray[70] };
+      opacity: 0.6;
+    }
+    .swiper-pagination-bullet-active {
+      background: ${ props => props.theme.colors.secondary[1] };
+      opacity: 1;
+    }
+  }
 `
 export const ContentMovies = styled(Card)`
   height: 200px;

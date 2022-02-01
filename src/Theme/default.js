@@ -2,6 +2,10 @@ export default {
   colors: {
       dark: 'rgba(30, 31, 39, 1)',
       light: '#ffffff',
+      opacity: {
+        50: 'linear-gradient(0deg, rgba(40,40,40,0.5) 10%, rgba(255,255,255,0) 100%)',
+        60: 'linear-gradient(0deg, rgba(40,40,40,0.6) 50%, rgba(255,255,255,0) 100%)'
+      },
       gray: {
         10: 'rgba(40, 40, 40, 1)',
         30: 'rgba(72, 71, 71, 1)',
@@ -16,7 +20,8 @@ export default {
   radius: {
       s: '5px',
       xs: '14px',
-      l: '28px'
+      l: '28px',
+      full: '50%',
   },
   // Breakpoints for responsive design
   breakpoints: {
