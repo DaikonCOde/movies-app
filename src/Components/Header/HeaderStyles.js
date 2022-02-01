@@ -1,0 +1,27 @@
+import styled from "styled-components";
+
+import { ContentIconsGlobal } from "../../Styles/Globals/Icons";
+
+export const ContentHeader = styled.header`
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background: ${ props => props.theme.colors.dark };
+  padding: 20px 30px;
+`
+
+export const Brand = styled.div`
+  width: 60%;
+  span { 
+    color: ${ props => props.theme.colors.light};
+    font-size: 24px;
+    font-weight: 600;
+  }
+`
+
+export const Menu = styled(ContentIconsGlobal)`
+  width: 30%;
+  .search {
+    margin: 0 10px 0 0;
+  }
+`
