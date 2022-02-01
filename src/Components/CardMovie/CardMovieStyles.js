@@ -5,13 +5,14 @@ import { ButtonPlayGlobal } from "../../Styles/Globals/ButtonPlayGlobal";
 export const ContentCardMovie = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-around;
+  gap: 10px 0;
   margin: 20px 0;
+  min-width: 300px
 `
 
 export const ItemMovie = styled(Card)`
-  width: 150px;
+  width: 140px;
   height: 225px;
   padding: 0;
   display: flex;

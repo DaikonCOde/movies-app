@@ -5,7 +5,7 @@ import { ButtonPlayGlobal } from "../../Styles/Globals/ButtonPlayGlobal";
 
 export const ContentComingSoon = styled.div`
   margin: 20px 0;
-  padding: 0 30px;
+  padding: 0 15px;
   width: 100%;
 `
 export const ContentMovies = styled(Card)`

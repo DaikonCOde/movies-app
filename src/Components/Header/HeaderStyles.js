@@ -7,7 +7,7 @@ export const ContentHeader = styled.header`
   display: flex;
   justify-content: space-around;
   background: ${ props => props.theme.colors.dark };
-  padding: 20px 30px;
+  padding: 20px 15px;
 `
 
 export const Brand = styled.div`

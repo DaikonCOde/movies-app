@@ -11,7 +11,7 @@ export const ContentSearch = styled.div`
   bottom: 0;
   right: 0;
   background: ${ props => props.theme.colors.dark };
-  padding: 20px 30px;
+  padding: 20px 15px;
   z-index: 10;
   transform: ${props => props.isOpen ? ' translateX(0)': 'translateX(100%)'};
   transition: all .3s linear;
@@ -58,7 +58,7 @@ export const ContentResultSearch = styled.div`
   .contentCards {
     overflow-y: auto;
     max-height: 400px;
-    padding: 0 0 20px 0;
+    padding: 0 0 40px 0;
   }
   .notFound{
     color: ${ props => props.theme.colors.light }
