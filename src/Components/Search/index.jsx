@@ -26,32 +26,47 @@ const Search = ({ isOpen, onClose }) => {
     if( key.length > 2 ) {
       getMovieByName(key)
     }
-    if( key.length <= 2) {
-      setSearchParams({})
-    }
   },[key] )
   
   
   const handleChange = (e) => {
     const value = e.target.value;
     const keyword = value.toLowerCase().replaceAll(' ', '%20');
-    setSearchParams({keyword})
+
+    if (keyword.length <= 2) {
+      setSearchParams({})
+    } else {
+      setSearchParams({keyword});
+    }
 
   }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const keyword = e.target.elements.keyword.value;
+    
+    if (keyword.length <= 2) {
+      return;
+    }
+    getMovieByName(key)
+  }
+
   return (
     <ContentSearch isOpen={isOpen} >
       <ContentIcon onClick={onClose} >
         <MdChevronRight />
       </ContentIcon>
-      <ContentForm>
+      <ContentForm onSubmit={ handleSubmit } >
         <input 
           type="text" 
           placeholder='What would you like to see?' 
-          name='title' 
+          name='keyword' 
           className='inputTitle'
           onChange={ handleChange }
+          id='keyword'
+          required
         />
-        <ButtonSubmit as='button' type="submit">
+        <ButtonSubmit as='button' type="submit" onSubmit={ handleSubmit }>
           <MdSearch />
         </ButtonSubmit>
       </ContentForm>

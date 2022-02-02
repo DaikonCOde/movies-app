@@ -46,9 +46,9 @@ const SingleMovie = () => {
   return (
     <ContentSingleMovie>
       <HeroMovie img={`${config.IMG_URL}${movieDetails.backdrop_path}`} >
-        <PosterMovie>
+        <PosterMovie onClick={ () =>  HandleVideo(movieDetails.id) }>
           <img src={`${config.IMG_URL}${movieDetails.poster_path}`} alt="" />
-          <ButtonPlayGlobal className="btnPlay" onClick={ () =>  HandleVideo(movieDetails.id) }>
+          <ButtonPlayGlobal className="btnPlay" >
             <MdPlayArrow />
           </ButtonPlayGlobal>
         </PosterMovie>

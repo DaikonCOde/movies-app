@@ -34,7 +34,7 @@ export const PosterMovie = styled.div`
   transform: translateY(115%);
   background: ${ props => props.theme.colors.gray[10]};
   border-radius: ${ props => props.theme.radius.xs };
-
+  z-index: 5;
   img {
     border-radius: ${ props => props.theme.radius.xs };
     width: 100%;
@@ -46,14 +46,6 @@ export const PosterMovie = styled.div`
     position: absolute;
     top: calc(50% - 17.5px);
     left: calc(50% - 17.5px);
-    &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    }
   }
 `
 
@@ -71,7 +63,7 @@ export const RuntimeMovie = styled(RatingMovie)`
 export const BodyMovie = styled.div`
   padding: 20px 15px;
   .titleMovie {
-    font-size: 18px;
+    font-size: 20px;
     line-height:20px;
     max-width: calc(100% - 130px) ;
   }
