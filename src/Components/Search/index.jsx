@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 // Hooks
-import { useGetMovieByName } from '../../Hooks/useGetMovieByName';
+import { useGetMovieByName } from '../../Hooks/useGetMovieByName.js';
 import { useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 // Components
-import CardMovie from '../CardMovie';
-import Loading from '../Loading';
+import CardMovie from '../CardMovie/index.jsx';
+import Loading from '../Loading/index.jsx';
 // Styles
-import { ContentSearch, ContentIcon, ContentForm, ButtonSubmit, ContentResultSearch } from './SearchStyles';
-import { Title } from '../../Styles/Globals/Title'
+import { ContentSearch, ContentIcon, ContentForm, ButtonSubmit, ContentResultSearch } from './SearchStyles.js';
+import { Title } from '../../Styles/Globals/Title.js'
 // Icons
 import { MdChevronRight, MdSearch } from 'react-icons/md';
 

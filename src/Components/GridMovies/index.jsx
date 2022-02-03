@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
 // Components
-import FilterCategories from '../FilterCategories';
-import CardMovie from '../CardMovie';
-import Loading from '../Loading';
+import FilterCategories from '../FilterCategories/index.jsx';
+import CardMovie from '../CardMovie/index.jsx';
+import Loading from '../Loading/index.jsx';
 // Hooks
-import { useGetListMoviesByCategories } from '../../Hooks/useGetListMoviesByCategories';
-import { useGetMoviesByRating } from '../../Hooks/useGetMoviesByRating';
+import { useGetListMoviesByCategories } from '../../Hooks/useGetListMoviesByCategories.js';
+import { useGetMoviesByRating } from '../../Hooks/useGetMoviesByRating.js';
 import { useSelector } from 'react-redux';
 // Styles
-import { Title } from '../../Styles/Globals/Title';
-import { ContentGridMovies, ListMovies } from './GridMoviesStyles';
+import { Title } from '../../Styles/Globals/Title.js';
+import { ContentGridMovies, ListMovies } from './GridMoviesStyles.js';
 
 const GridMovies = () => {
   const [ getListMovies ] = useGetListMoviesByCategories();

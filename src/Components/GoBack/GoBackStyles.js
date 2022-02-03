@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ContentIconsGlobal } from '../../Styles/Globals/Icons';
+import { ContentIconsGlobal } from '../../Styles/Globals/Icons.js';
 
 export const ContentGoBack = styled(ContentIconsGlobal)`
   background: ${ props => props.theme.colors.light};

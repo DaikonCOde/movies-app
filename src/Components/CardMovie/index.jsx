@@ -1,9 +1,9 @@
 import React from 'react';
 // Hooks
 import { Link } from 'react-router-dom'
-
-import { ContentCardMovie, ItemMovie, ContentInfo, InfoMovie, ButtonPlay } from './CardMovieStyles';
-import { TitleMovie, RatingMovie } from '../../Styles/Globals/Title';
+// Styles
+import { ContentCardMovie, ItemMovie, ContentInfo, InfoMovie, ButtonPlay } from './CardMovieStyles.js';
+import { TitleMovie, RatingMovie } from '../../Styles/Globals/Title.js';
 import { MdPlayArrow, MdStar } from 'react-icons/md';
 // Swiper
 import { Navigation } from 'swiper';
@@ -21,10 +21,37 @@ const CardMovie = ({ movies }) => {
       <Swiper
         slidesPerView={2}
         // centeredSlides={true}
-        spaceBetween={0}
+        spaceBetween={10}
         navigation={true}
         modules={[Navigation]}
         className="mySwiper"
+        breakpoints={
+          {
+            480: {
+              width: 480,
+              slidesPerView: 3,
+            },
+            640: {
+              width: 640,
+              slidesPerView: 4,
+            },
+            // when window width is >= 768px
+            768: {
+              width: 768,
+              slidesPerView: 4,
+            },
+            1024: {
+              width: 1024,
+              slidesPerView: 4,
+              spaceBetween: 15
+            },
+            1440: {
+              width: 1440,
+              slidesPerView: 6,
+              spaceBetween: 15
+            }
+          }
+        }
       >
         {
           movies.map( (movie) => (

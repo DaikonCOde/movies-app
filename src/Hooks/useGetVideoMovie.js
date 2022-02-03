@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import config from '../config';
-
 import axios from 'axios';
+
+import config from '../config.js';
 
 export const useGetVideoMovie = (id) => {
 

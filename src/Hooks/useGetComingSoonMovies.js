@@ -1,9 +1,9 @@
 import axios from "axios";
 
 import { useDispatch } from "react-redux";
-import { insertMovies } from "../Storage/Reducers/ComingSoon";
+import { insertMovies } from "../Storage/Reducers/ComingSoon.js";
 
-import config from "../config"
+import config from "../config.js"
 
 export const useGetComingSoonMovies = () => {
 

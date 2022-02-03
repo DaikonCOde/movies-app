@@ -1,8 +1,9 @@
 import axios from 'axios';
-import {useDispatch} from 'react-redux'
-import { insertTrendingMovies } from '../Storage/Reducers/Trending';
 
-import config from '../config';
+import {useDispatch} from 'react-redux'
+import { insertTrendingMovies } from '../Storage/Reducers/Trending.js';
+
+import config from '../config.js';
 
 export const useGetMoviesTrending = () => {
 

@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 // Components
-import Loading from '../Loading'
+import Loading from '../Loading/index.jsx'
 // Hooks
-import { useGetComingSoonMovies } from '../../Hooks/useGetComingSoonMovies';
+import { useGetComingSoonMovies } from '../../Hooks/useGetComingSoonMovies.js';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 // Styles
-import { ContentComingSoon, ContentMovies, TitleMovie, ButtonPlay } from './ComingSoonStyles'
-import { Title } from '../../Styles/Globals/Title';
+import { ContentComingSoon, ContentMovies, TitleMovie, ButtonPlay } from './ComingSoonStyles.js'
+import { Title } from '../../Styles/Globals/Title.js';
 // Icons
 import { MdPlayArrow } from 'react-icons/md';
 
@@ -44,7 +44,32 @@ const ComingSoon = () => {
           dynamicBullets: true,
         }}
         modules={[Navigation, Pagination]}
-        className="mySwiper"
+        className="contentSwiper"
+        breakpoints={
+          {
+            // when window width is >= 640px
+            640: {
+              width: 640,
+              slidesPerView: 2,
+            },
+            // when window width is >= 768px
+            768: {
+              width: 768,
+              slidesPerView: 2,
+              centeredSlides: false
+            },
+            1024: {
+              width: 1024,
+              slidesPerView: 3,
+              centeredSlides: false
+            },
+            1440: {
+              width: 1440,
+              slidesPerView: 3,
+              centeredSlides: false
+            }
+          }
+        }
       >
         {
           isLoading 

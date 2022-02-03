@@ -1,9 +1,9 @@
 import axios from "axios";
 
 import { useDispatch } from "react-redux";
-import { insertMoviesByRating } from "../Storage/Reducers/MoviesByRating";
+import { insertMoviesByRating } from "../Storage/Reducers/MoviesByRating.js";
 
-import config from "../config"
+import config from "../config.js"
 
 export const useGetMoviesByRating = () => {
 

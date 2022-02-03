@@ -1,5 +1,7 @@
 import React from 'react';
-import { ContentLoader, Loader } from './LoadingStyles';
+
+// Styles
+import { ContentLoader, Loader } from './LoadingStyles.js';
 
 const Loading = ( { height, margin } ) => {
   

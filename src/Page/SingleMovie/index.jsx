@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 // Hooks
 import { useSearchParams, useNavigate } from 'react-router-dom';
-import { useGetSingleMovie } from '../../Hooks/useGetSingleMovie'
+import { useGetSingleMovie } from '../../Hooks/useGetSingleMovie.js'
 // Components
-import GoBack from '../../Components/GoBack';
-import Loading from '../../Components/Loading';
+import GoBack from '../../Components/GoBack/index.jsx';
+import Loading from '../../Components/Loading/index.jsx';
 // Styles
 import {
   ContentSingleMovie, 
@@ -15,15 +15,17 @@ import {
   RuntimeMovie,
   ListCategories,
   Overview,
-} from './SingleMovieStyles';
-import { ButtonPlayGlobal } from '../../Styles/Globals/ButtonPlayGlobal';
-import { RatingMovie, TitleMovie, } from '../../Styles/Globals/Title';
+} from './SingleMovieStyles.js';
+import { ButtonPlayGlobal } from '../../Styles/Globals/ButtonPlayGlobal.js';
+import { RatingMovie, TitleMovie, } from '../../Styles/Globals/Title.js';
 
 import { MdPlayArrow, MdStar } from 'react-icons/md';
 
-import config from '../../config';
+import config from '../../config.js';
 
 const SingleMovie = () => {
+
+  console.log(document.title);
 
   const [ searchParams ] = useSearchParams();
   const navigate = useNavigate();
@@ -34,6 +36,8 @@ const SingleMovie = () => {
 
   useEffect( () => {
     getSingleMovie(idMovie)
+    document.title = 'eflix | Movie';
+
   }, [])
 
   const HandleVideo = (id) => {

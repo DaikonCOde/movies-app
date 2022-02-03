@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import Categories from './Reducers/Categories';
-import MoviesByCategories from './Reducers/MoviesByCategories';
-import MoviesByRating from './Reducers/MoviesByRating';
-import TrendingMovies from './Reducers/Trending'
-import ComingSoon from './Reducers/ComingSoon'
+import Categories from './Reducers/Categories.js';
+import MoviesByCategories from './Reducers/MoviesByCategories.js';
+import MoviesByRating from './Reducers/MoviesByRating.js';
+import TrendingMovies from './Reducers/Trending.js';
+import ComingSoon from './Reducers/ComingSoon.js';
 
 export const store = configureStore({
   reducer: {

@@ -1,20 +1,10 @@
 import styled from "styled-components";
-import { ContentIconsGlobal } from "../../Styles/Globals/Icons";
+import { ContentIconsGlobal } from "../../Styles/Globals/Icons.js";
+import { ContentNav } from "../../Styles/Globals/ContentNav.js";
 
-export const ContentSearch = styled.div`
-  width: 100%;
-  min-height: 100vh;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: ${ props => props.theme.colors.dark };
-  padding: 20px 15px;
-  z-index: 12;
+export const ContentSearch = styled(ContentNav)`
   transform: ${props => props.isOpen ? ' translateX(0)': 'translateX(100%)'};
-  transition: all .3s linear;
+  box-shadow: ${ props => props.isOpen ? '-10px 0 20px 0px #8383831f': 'none' };
 `
 export const ContentIcon = styled(ContentIconsGlobal)`
   width: fit-content;

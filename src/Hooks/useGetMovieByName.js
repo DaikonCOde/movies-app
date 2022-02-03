@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 
-import config from '../config'
+import config from '../config.js'
 
 export const useGetMovieByName = () => {
   const [ movies, setMovies ] = useState([])

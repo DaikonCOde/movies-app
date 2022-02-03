@@ -1,8 +1,9 @@
 import React from 'react';
+// Styles
+import { ContentGoBack } from './GoBackStyles.js'
+// Icons
 import { useNavigate } from 'react-router-dom';
 import { MdChevronLeft } from 'react-icons/md';
-
-import { ContentGoBack } from './GoBackStyles'
 
 const GoBack = () => {
 

@@ -4,6 +4,14 @@ export const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
+    &::-webkit-scrollbar {
+    width: 8px;
+    background: ${ props => props.theme.colors.gray[10] };
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      background:  ${ props => props.theme.colors.gray[50] };
+    }
   }
 
   * {
@@ -34,7 +42,7 @@ export const GlobalStyles = createGlobalStyle`
     border: none;
     outline: none;
   }
-
+  
   #root {
     .swiper-button-prev {
       left: 0px;

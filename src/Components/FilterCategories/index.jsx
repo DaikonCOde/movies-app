@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 // Hook
 import { useDispatch ,useSelector } from 'react-redux';
-import { updateCurrentCategory } from '../../Storage/Reducers/MoviesByCategories';
+import { updateCurrentCategory } from '../../Storage/Reducers/MoviesByCategories.js';
 // Styles
-import { ContentFilterCategories, Category } from './FilterCategoriesStyles';
+import { ContentFilterCategories, Category } from './FilterCategoriesStyles.js';
 
 const FilterCategories = () => {
 
@@ -37,7 +37,7 @@ const FilterCategories = () => {
 
         {
           isLoading
-            ? (<div>Loading</div>)
+            ? (<div></div>)
             : list.map(category => (
                 <Category 
                   key={category.id}

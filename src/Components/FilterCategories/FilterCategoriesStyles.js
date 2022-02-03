@@ -4,9 +4,18 @@ export const ContentFilterCategories =  styled.ul`
   display: flex;
   flex-wrap: no-wrap;
   overflow-x: auto;
+  overflow-y: hidden;
   width: 100%;
   gap: 0 5px;
   padding: 0 0 10px 0;
+  &::-webkit-scrollbar {
+    height: 5px;
+    background: ${ props => props.theme.colors.gray[10] };
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background:  ${ props => props.theme.colors.gray[50] };
+  }
 `
 
 export const Category = styled.li`
@@ -20,6 +29,9 @@ export const Category = styled.li`
   background: ${ props => props.theme.colors.gray[10] };
   border-radius: ${ props => props.theme.radius.s };
   transition: all .3s linear;
+  @media (min-width: ${ props => props.theme.breakpoints.tablet }) {
+    font-size: 15px
+  }
   &:active {
     transform: scale(0.9);
   }

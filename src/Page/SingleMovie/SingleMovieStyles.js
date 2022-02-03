@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { RatingMovie } from "../../Styles/Globals/Title";
+import { RatingMovie } from "../../Styles/Globals/Title.js";
 
 export const ContentSingleMovie = styled.section`
   background: ${ props => props.theme.colors.dark };
@@ -15,6 +15,13 @@ export const HeroMovie = styled.div`
   height: 250px;
   position: relative;
   background-size: cover;
+  @media (min-width:${ props => props.theme.breakpoints.tablet} ) {
+    height: 400px; 
+  }
+  @media (min-width:${ props => props.theme.breakpoints.laptop} ) {
+    height: 450px;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -30,11 +37,21 @@ export const PosterMovie = styled.div`
   width: 100px; 
   height: 150px;
   position: relative;
-  margin: 0 15px 0 auto;
+  margin: 0 0 0 auto;
+  position: absolute;
+  bottom: 110px;
+  right: 15px;
   transform: translateY(115%);
   background: ${ props => props.theme.colors.gray[10]};
   border-radius: ${ props => props.theme.radius.xs };
   z-index: 5;
+  cursor: pointer;
+  @media (min-width: ${ props => props.theme.breakpoints.tablet }) {
+    width: 135px;
+    height: 200px;
+    bottom: 140px;
+    right: 30px;
+  }
   img {
     border-radius: ${ props => props.theme.radius.xs };
     width: 100%;
@@ -50,9 +67,10 @@ export const PosterMovie = styled.div`
 `
 
 export const StatisticsMovie = styled.div`
-  position: relative;
-  padding: 10px 15px;
+  position: absolute;
   transform: translateY(100%);
+  bottom: 30px;
+  left: 15px;
 `
 
 export const RuntimeMovie = styled(RatingMovie)`
@@ -62,10 +80,16 @@ export const RuntimeMovie = styled(RatingMovie)`
 
 export const BodyMovie = styled.div`
   padding: 20px 15px;
+  @media (min-width: ${ props => props.theme.breakpoints.tablet }) {
+    padding: 30px;
+  }
   .titleMovie {
     font-size: 20px;
     line-height:20px;
     max-width: calc(100% - 130px) ;
+    @media (min-width: ${ props => props.theme.breakpoints.tablet }) {
+      font-size: 24px;
+    }
   }
 `
 
@@ -87,6 +111,9 @@ export const ListCategories = styled.ul`
     background-color: ${ props => props.theme.colors.gray[30]};
     padding: 5px 8px;
     border-radius: ${ props => props.theme.radius.s };
+    @media (min-width: ${ props => props.theme.breakpoints.tablet }) {
+      font-size: 14px;
+    }
   }
 `
 
@@ -94,6 +121,9 @@ export const Overview = styled.div`
 
   .overview {
     font-size: 14px;
-    color: ${ props => props.theme.colors.gray[70]}
+    color: ${ props => props.theme.colors.gray[70]};
+    @media (min-width: ${ props => props.theme.breakpoints.tablet }) {
+      font-size: 16px;
+    }
   }
 `

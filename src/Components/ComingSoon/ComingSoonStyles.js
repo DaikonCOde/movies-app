@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import { Title } from "../../Styles/Globals/Title";
-import { Card } from "../../Styles/Globals/Card";
-import { ButtonPlayGlobal } from "../../Styles/Globals/ButtonPlayGlobal";
+import { Title } from "../../Styles/Globals/Title.js";
+import { Card } from "../../Styles/Globals/Card.js";
+import { ButtonPlayGlobal } from "../../Styles/Globals/ButtonPlayGlobal.js";
 
 export const ContentComingSoon = styled.div`
-  margin: 20px 0;
-  padding: 0 15px;
+  margin: 0 0 20px;
   width: 100%;
-  .mySwiper {
+  .contentSwiper {
+    justify-content: center;
     .swiper-pagination-bullet {
       background: ${ props => props.theme.colors.gray[70] };
       opacity: 0.6;
@@ -16,12 +16,27 @@ export const ContentComingSoon = styled.div`
       background: ${ props => props.theme.colors.secondary[1] };
       opacity: 1;
     }
+    .swiper-wrapper {
+      justify-content: center;
+    }
+    .swiper-wrapper {
+      @media (min-width: ${ props => props.theme.breakpoints.laptopL }) {
+        justify-content: space-around;
+      }
+    }
   }
 `
 export const ContentMovies = styled(Card)`
   height: 200px;
-  max-width: 350px;
-  min-width: 300px
+  width: 100%;
+  max-width: 380px;
+  @media (min-width: ${ props => props.theme.breakpoints.mobileM }) {
+    height: 220px;
+  }
+  @media (min-width: ${ props => props.theme.breakpoints.laptopL }) {
+    height: 300px;
+    max-width: 450px;
+  }
 `
 export const TitleMovie = styled(Title)`
   font-size: 16px;

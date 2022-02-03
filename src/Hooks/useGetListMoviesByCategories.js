@@ -1,10 +1,9 @@
 import axios from 'axios';
-import { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import config from '../config'
+import { insertMoviesByCategories } from '../Storage/Reducers/MoviesByCategories.js';
 
-import { insertMoviesByCategories } from '../Storage/Reducers/MoviesByCategories';
+import config from '../config.js'
 
 export const useGetListMoviesByCategories = () => {
   

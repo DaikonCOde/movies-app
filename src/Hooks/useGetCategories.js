@@ -1,8 +1,8 @@
 import axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { insert } from '../Storage/Reducers/Categories';
-import config from '../config'
+import { insert } from '../Storage/Reducers/Categories.js';
+import config from '../config.js'
 
 export const useGetCategories = () => {
 

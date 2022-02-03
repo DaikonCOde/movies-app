@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Card } from "../../Styles/Globals/Card";
-import { ButtonPlayGlobal } from "../../Styles/Globals/ButtonPlayGlobal";
+import { Card } from "../../Styles/Globals/Card.js";
+import { ButtonPlayGlobal } from "../../Styles/Globals/ButtonPlayGlobal.js";
 
 export const ContentCardMovie = styled.div`
   display: flex;
@@ -9,17 +9,27 @@ export const ContentCardMovie = styled.div`
   gap: 10px 0;
   margin: 20px 0;
   min-width: 300px;
-  .swiperSlide {
-    width: 150px
-  }
+  
 `
 
 export const ItemMovie = styled(Card)`
-  width: 150px;
-  height: 225px;
+  min-width: 150px;
+  max-width : 190px;
+  height: 240px;
   padding: 0;
   display: flex;
   align-items: flex-end;
+  @media (min-width: ${ props => props.theme.breakpoints.mobileM }) {
+    height: 260px;
+  }
+  @media (min-width: ${ props => props.theme.breakpoints.tablet }) {
+    height: 300px;
+    max-width: 190px;
+  }
+  @media (min-width: ${ props => props.theme.breakpoints.laptop }) {
+    height: 320px;
+    max-width: 210px;
+  }
 `
 export const ContentInfo = styled.div`
   display: flex;
