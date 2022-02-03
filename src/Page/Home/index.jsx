@@ -9,6 +9,7 @@ import { Content } from '../../Styles/Globals/ContentPage.js'
 
 const Home = () => {
 
+  document.title = 'eFlix';
 
   return (
     <Content>
